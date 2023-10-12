@@ -90,6 +90,9 @@ router.delete('/:id', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
+    res.header('Access-Control-Allow-Origin', 'https://6527ae6249182411efcdbd86--chic-pie-348ac1.netlify.app');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     try {
         const { email, password } = req.body;
         const userDoc = await User.findOne({ email });
