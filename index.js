@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: 'http://localhost:5173', // Adjust this to your React app's URL
+    origin: 'https://art-auction-api.onrender.com', // Adjust this to your React app's URL
     methods: ['GET', 'POST'],
   },
 });
@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:5173',
+    origin: 'https://art-auction-api.onrender.com',
     
 }));
 
