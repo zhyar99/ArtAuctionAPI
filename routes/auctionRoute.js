@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Auction = require('../models/auction'); // Assuming you've defined your schema in 'Auction.js'
+const Auction = require('../Models/auction'); // Assuming you've defined your schema in 'Auction.js'
 
 
 // Fetch all auctions
