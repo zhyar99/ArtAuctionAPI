@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: 'https://whimsical-longma-b13cc1.netlify.app/', // Adjust this to your React app's URL
+    origin: 'https://6527ae6249182411efcdbd86--chic-pie-348ac1.netlify.app/', // Adjust this to your React app's URL
     methods: ['GET', 'POST'],
   },
 });
@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
     credentials: true,
-    origin: 'https://whimsical-longma-b13cc1.netlify.app/',
+    origin: 'https://6527ae6249182411efcdbd86--chic-pie-348ac1.netlify.app/',
     
 }));
 
