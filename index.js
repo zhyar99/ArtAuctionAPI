@@ -14,13 +14,22 @@ const http = require('http');
 const Artwork = require('./Models/artwork');
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server);
+const io = socketIo(server, {
+  cors: {
+    origin: 'https://6527ae6249182411efcdbd86--chic-pie-348ac1.netlify.app', // Adjust this to your React app's URL
+    methods: ['GET', 'POST'],
+  },
+});
 
 mongoose.connect('mongodb+srv://zhyar9991:Zhyar9991@cluster0.mz9arc7.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true});
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+    credentials: true,
+    origin: 'https://6527ae6249182411efcdbd86--chic-pie-348ac1.netlify.app',
+    
+}));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
