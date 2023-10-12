@@ -8,6 +8,7 @@ const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = "jksadhflajkshdflakjhsdflakjsdhfl";
 // Create a new artist
 router.post('/', async (req, res) => {
+    
     try {
       
         const newArtist = new Artist(req.body); // req.body should contain artist data
