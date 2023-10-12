@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: 'https://art-auction-api.onrender.com', // Adjust this to your React app's URL
+    origin: 'https://whimsical-longma-b13cc1.netlify.app/', // Adjust this to your React app's URL
     methods: ['GET', 'POST'],
   },
 });
@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
     credentials: true,
-    origin: 'https://art-auction-api.onrender.com',
+    origin: 'https://whimsical-longma-b13cc1.netlify.app/',
     
 }));
 
